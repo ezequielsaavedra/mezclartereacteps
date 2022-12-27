@@ -14,8 +14,9 @@
 }
 
 .App-header {
+  background-color: rgb(252, 242, 246);
   font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 100vw;
 }
 
 .App-link {
