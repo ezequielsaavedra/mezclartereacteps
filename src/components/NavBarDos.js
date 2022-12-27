@@ -11,10 +11,10 @@ function NavBarDos() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="me-auto justify-content-center products-nav">
-                        <Button variant="light" className='products-button'><Nav.Link href="#">Macetas</Nav.Link></Button>
-                        <Button variant="light" className='products-button'><Nav.Link href="#">Velas</Nav.Link></Button>
-                        <Button variant="light" className='products-button'><Nav.Link href="#">Decoraciones</Nav.Link></Button>
-                        <Button variant="light" className='products-button'><Nav.Link href="#">Ceniceros</Nav.Link></Button>
+                        <Button variant="light" className='products-button'><Nav.Link className='filtro-button'>Macetas</Nav.Link></Button>
+                        <Button variant="light" className='products-button'><Nav.Link className='filtro-button'>Velas</Nav.Link></Button>
+                        <Button variant="light" className='products-button'><Nav.Link className='filtro-button'>Decoraciones</Nav.Link></Button>
+                        <Button variant="light" className='products-button'><Nav.Link className='filtro-button'>Ceniceros</Nav.Link></Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

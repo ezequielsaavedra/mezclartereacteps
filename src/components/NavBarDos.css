@@ -20,3 +20,11 @@
     border:  2px solid rgb(252, 242, 246);
     border-bottom: 2px solid rgb(197, 193, 194);
 }
+
+.filtro-button {
+    color: rgb(170, 172, 171);
+}
+
+.filtro-button:active {
+    color: black;
+}
