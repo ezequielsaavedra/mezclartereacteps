@@ -1,0 +1,28 @@
+.contador-prods {
+    color: black;
+    background-color: rgb(252, 242, 246);
+}
+
+.add-rest-button:hover{
+    color: black;
+    background-color: rgb(252, 242, 246);
+}
+
+.cantidad-prods {
+    width: 8rem;
+    border: 1px solid black;
+    color: black;
+}
+
+.agregar-carrito {
+    color: black;
+    background-color: rgb(252, 242, 246);
+    border: 1px solid rgb(209, 206, 206);
+}
+
+.agregar-carrito:hover {
+    color: black;
+    background-color: rgb(252, 242, 246);
+    border: 1px solid rgb(209, 206, 206);
+}
+
