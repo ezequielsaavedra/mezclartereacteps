@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function NavBar() {
     return (
         <Navbar expanded >
-            <Container >
+            <Container>
                 <Navbar.Brand>
                     <Link to="/">
                         <Image src="https://i.ibb.co/X56vc7q/logo-completo.jpg" alt="logo" className="d-inline-block align-top brand-img" roundedCircle/>

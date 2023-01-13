@@ -1,10 +1,16 @@
 import "./ItemListContainer.css";
-import ItemCount from '../../components/ItemCount/ItemCount.js';
+import ItemList from "../ItemList/ItemList";
+import Container from 'react-bootstrap/Container';
+import Loader from "../../components/Loader/Loader";
 
 function ItemListContainer() {
+
     return (
         <>
-            <ItemCount />
+        <Container fluid className="home">
+            <ItemList />
+            <Loader />
+        </Container>
         </>
     );
 }
