@@ -15,7 +15,7 @@ function Loader() {
         <>
         {loading ? (
         <div className='loader'>
-            <Spinner animation="grow" variant="danger" className='spinner'/>
+            <Spinner animation="grow" className='spinner'/>
         </div>) : null}
         </>
     );

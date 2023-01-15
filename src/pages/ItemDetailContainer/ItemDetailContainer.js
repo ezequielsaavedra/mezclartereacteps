@@ -1,8 +1,7 @@
-import Item from "../../components/Item/Item";
-import ItemCategory from "../ItemCategory/ItemCategory";
-import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import Loader from "../../components/Loader/Loader";
+import "./ItemDetailContainer.css"
 
 class Productos {
     constructor(id, name, descripcion, imagen, categoria, precio, stock) {
@@ -26,11 +25,11 @@ const producto7 = new Productos(7, "Cascada de Humo", "Nada como una cascada de 
 const producto8 = new Productos(8, "Lapicero Vader", "Tranquilos, los lapices no se pasarán al lado oscuro... o si??", "https://i.ibb.co/X7smmvp/lapicero-darth-vader.png", "decoraciones", 600, 5);
 const producto9 = new Productos(9, "Vela Papá Noel", "Esplendida para pasar las Fiestas con tus seres queridos", "https://i.ibb.co/M1PSTCX/vela-papa-noel.png", "velas", 500, 7);
 
-const ItemList = () => {
+const ItemDetailContainer = () => {
 
-    const [productos, setProducts] = useState([]);
+    const [prods, setProds] = useState([]);
 
-    const getProducts = new Promise((resolve, reject) => {
+    const getProds = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve([
                 producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9,
@@ -39,20 +38,20 @@ const ItemList = () => {
     });
 
     useEffect(() => {
-        getProducts.then((response) => {
-            setProducts(response)
+        getProds.then((response) => {
+            setProds(response)
+            console.log(response)
         }).catch(error => console.log(error))
     }, [])
 
-    const { categoria } = useParams();
+    console.log(prods)
 
     return (
-        <>
-            <Row className="justify-content-center">
-                {categoria ? (<ItemCategory listaProductos={productos} />) : (<Item listaProductos={productos} />)}
-            </Row>
-        </>
+        <div className="single-prod">
+            <ItemDetail listaProds={prods} />
+            <Loader />
+        </div>
     )
 }
 
-export default ItemList
+export default ItemDetailContainer

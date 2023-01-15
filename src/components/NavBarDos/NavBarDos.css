@@ -13,6 +13,7 @@
 .products-button {
     background-color: rgb(252, 242, 246);
     border:  2px solid rgb(252, 242, 246);
+    width: 7rem;
 }
 
 .products-button:hover {
@@ -23,8 +24,13 @@
 
 .filtro-button {
     color: rgb(170, 172, 171);
+    text-decoration: none;
 }
 
-.filtro-button:active {
+.filtro-button:hover {
+    color: black;
+}
+
+.active {
     color: black;
 }

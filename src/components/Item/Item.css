@@ -1,0 +1,10 @@
+.products-cards {
+    width: 15rem;
+    margin-top: 3rem;
+}
+
+.details-button {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(238, 212, 222);
+}
