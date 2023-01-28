@@ -15,7 +15,7 @@ function NavBarDos() {
                         <Button variant="light" className='products-button'><NavLink className={`filtro-button ${({ isActive }) => isActive ? "active" : "inactive"}`} to="/">Todo</NavLink></Button>
                         <Button variant="light" className='products-button'><NavLink className={`filtro-button ${({ isActive }) => isActive ? "active" : "inactive"}`} to="/category/macetas">Macetas</NavLink></Button>
                         <Button variant="light" className='products-button'><NavLink className={`filtro-button ${({ isActive }) => isActive ? "active" : "inactive"}`} to="/category/velas">Velas</NavLink></Button>
-                        <Button variant="light" className='products-button'><NavLink className={`filtro-button ${({ isActive }) => isActive ? "active" : "inactive"}`} to="/category/decoraciones">Decoraciones</NavLink></Button>
+                        <Button variant="light" className='products-button'><NavLink className={`filtro-button ${({ isActive }) => isActive ? "active" : "inactive"}`} to="/category/decoraciones">Decoraciones</NavLink></Button> 
                     </Nav>
                 </Navbar.Collapse>
             </Container>

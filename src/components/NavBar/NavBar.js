@@ -17,9 +17,6 @@ function NavBar() {
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Collapse id="responsive-navbar-nav" className='justify-content-end'>
-                    <Nav>
-                        <Button variant="light">Iniciar Sesion</Button>
-                    </Nav>
                     <CartWidget></CartWidget>
                 </Navbar.Collapse>
             </Container>

@@ -13,7 +13,8 @@
 .products-button {
     background-color: rgb(252, 242, 246);
     border:  2px solid rgb(252, 242, 246);
-    width: 7rem;
+    width: fit-content;
+    margin-left: 1rem;
 }
 
 .products-button:hover {

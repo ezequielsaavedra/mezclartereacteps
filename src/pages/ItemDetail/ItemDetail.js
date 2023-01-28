@@ -2,11 +2,14 @@ import ItemCount from "../../components/ItemCount/ItemCount";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useParams } from "react-router-dom";
+import { useState } from 'react';
 import "./ItemDetail.css";
 
 const ItemDetail = ({ listaProds }) => {
 
     const { id } = useParams();
+    const [contador, setContador] = useState(1);
+
 
     const prod = listaProds.filter((p) => p.id === parseInt(id))
 
@@ -27,7 +30,7 @@ const ItemDetail = ({ listaProds }) => {
                                     <ListGroup.Item>Stock: x{p.stock}</ListGroup.Item>
                                 </ListGroup>
                     </Card>
-                    <ItemCount stockProd={p.stock} />
+                    <ItemCount stockProd = {p.stock} contador = {contador} setContador = {setContador}/>
                 </div>
             ))}
         </>

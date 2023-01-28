@@ -1,16 +1,16 @@
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { useState } from 'react';
 import "./ItemCount.css";
 
-function ItemCount({ stockProd }) {
-    const [contador, setContador] = useState(1);
-    const stock = stockProd
+function ItemCount({ stockProd, contador, setContador } ) {
+    let stock = stockProd;
+
     const sumar = () => {
         if (stock > contador) {
             setContador(contador + 1)
         }
     }
+
     const restar = () => {
         if (contador > 1) {
             setContador(contador - 1)
