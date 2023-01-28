@@ -28,28 +28,26 @@ const producto9 = new Productos(9, "Vela Papá Noel", "Esplendida para pasar las
 const ItemDetailContainer = () => {
 
     const [prods, setProds] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const getProds = new Promise((resolve, reject) => {
-        setTimeout(() => {
             resolve([
                 producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9,
             ]);
-        }, 2000)
     });
 
     useEffect(() => {
-        getProds.then((response) => {
-            setProds(response)
-            console.log(response)
-        }).catch(error => console.log(error))
+        setTimeout (() => {
+            getProds.then((response) => {
+                setLoading(false)
+                setProds(response)
+            }).catch(error => console.log(error))
+        }, 2000)
     }, [])
-
-    console.log(prods)
 
     return (
         <div className="single-prod">
-            <ItemDetail listaProds={prods} />
-            <Loader />
+            {loading ? <Loader /> : <ItemDetail listaProds={prods} />}
         </div>
     )
 }

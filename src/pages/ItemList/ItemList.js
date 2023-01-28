@@ -3,6 +3,8 @@ import ItemCategory from "../ItemCategory/ItemCategory";
 import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
+
 
 class Productos {
     constructor(id, name, descripcion, imagen, categoria, precio, stock) {
@@ -29,30 +31,52 @@ const producto9 = new Productos(9, "Vela Papá Noel", "Esplendida para pasar las
 const ItemList = () => {
 
     const [productos, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { categoria } = useParams();
 
     const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => {
             resolve([
                 producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9,
             ]);
-        }, 2000)
     });
 
     useEffect(() => {
-        getProducts.then((response) => {
-            setProducts(response)
-        }).catch(error => console.log(error))
-    }, [])
+        setTimeout(() => {
+            getProducts
+            .then((response) => {
+                setLoading(false)
+                setProducts(response);
+            }).catch(error => console.log(error))
+        }, 2000)
+    }, []);
 
-    const { categoria } = useParams();
-
-    return (
-        <>
-            <Row className="justify-content-center">
-                {categoria ? (<ItemCategory listaProductos={productos} />) : (<Item listaProductos={productos} />)}
-            </Row>
-        </>
-    )
+    if (loading) {
+        return (
+            <>
+                <Row className="justify-content-center">
+                    <Loader />
+                </Row>
+            </>
+        )
+    } else {
+        if (categoria) {
+            return (
+                <>
+                    <Row className="justify-content-center">
+                        <ItemCategory listaProductos={productos} />
+                    </Row>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <Row className="justify-content-center">
+                        <Item listaProductos={productos} />
+                    </Row>
+                </>
+            )
+        }
+    }
 }
 
 export default ItemList

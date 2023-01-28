@@ -6,7 +6,6 @@ import "./ItemCount.css";
 function ItemCount({ stockProd }) {
     const [contador, setContador] = useState(1);
     const stock = stockProd
-    console.log(stock)
     const sumar = () => {
         if (stock > contador) {
             setContador(contador + 1)
