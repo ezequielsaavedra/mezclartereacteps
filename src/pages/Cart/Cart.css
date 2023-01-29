@@ -1,0 +1,8 @@
+.cart-body{
+    height: 70vh;
+}
+
+.btn-cart {
+    margin-left: 2rem;
+    background-color: rgb(212, 167, 212);
+}

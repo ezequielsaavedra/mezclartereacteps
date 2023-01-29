@@ -24,7 +24,6 @@ function ItemCount({ stockProd, contador, setContador } ) {
                 <button className='cantidad-prods text-center border-start-0' disabled>{contador}</button >
                 <Button variant="outline-dark" className='add-rest-button' onClick={sumar}>+</Button>
             </ButtonGroup>
-            <Button className='agregar-carrito' variant="danger">Agregar al carrito</Button>
         </div>
     );
 }

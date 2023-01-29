@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import Loader from "../../components/Loader/Loader";
 import "./ItemDetailContainer.css"
 

@@ -1,5 +1,5 @@
 import Item from "../../components/Item/Item";
-import ItemCategory from "../ItemCategory/ItemCategory";
+import ItemCategory from "../../components/ItemCategory/ItemCategory";
 import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
