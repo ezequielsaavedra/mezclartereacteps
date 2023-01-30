@@ -19,18 +19,14 @@ const Cart = () => {
     }
 
     return (
-        <>
-            <Container fluid className="home">
-                <div className='cart-body'>
-                    <CartItems />
-                </div>
-                <hr />
-                <h3>Su total es de: ${total}</h3>
-                <Button variant="light" className="btn-cart">Finalizar Compra</Button>
-                <Button variant="light" className="btn-cart" onClick={vaciarCarrito}> Vaciar carrito</Button>
-                <Link to={"/"}><Button variant="light" className="btn-cart"> Seguir comprando</Button></Link>
-            </Container>
-        </>
+        <Container>
+                <CartItems />
+            <hr />
+            <h3>Su total es de: ${total}</h3>
+            <Button variant="light" className="btn-cart">Finalizar Compra</Button>
+            <Button variant="light" className="btn-cart" onClick={vaciarCarrito}> Vaciar carrito</Button>
+            <Link to={"/"}><Button variant="light" className="btn-cart"> Seguir comprando</Button></Link>
+        </Container>
     )
 }
 

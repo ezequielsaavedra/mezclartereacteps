@@ -1,3 +1,9 @@
+.cart-body{
+    min-height: 70vh;
+    width: 100%;
+    overflow: auto;
+}
+
 .btn-eliminar{
     background-color: rgb(238, 212, 222);
 }
