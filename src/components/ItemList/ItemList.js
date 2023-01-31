@@ -2,9 +2,9 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
-import "./Item.css"
+import "./ItemList.css"
 
-const Item = ({ listaProductos }) => {
+const ItemList = ({ listaProductos }) => {
     return (
         <>
             {listaProductos.map((p) => (
@@ -29,4 +29,4 @@ const Item = ({ listaProductos }) => {
     );
 };
 
-export default Item;
+export default ItemList;

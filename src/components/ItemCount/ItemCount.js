@@ -1,6 +1,6 @@
+import "./ItemCount.css";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import "./ItemCount.css";
 
 function ItemCount({ stockProd, contador, setContador } ) {
     let stock = stockProd;

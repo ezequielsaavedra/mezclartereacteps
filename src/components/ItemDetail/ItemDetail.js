@@ -13,7 +13,7 @@ const ItemDetail = ({ listaProds }) => {
     const [contador, setContador] = useState(1);
 
 
-    const prod = listaProds.filter((p) => p.id === parseInt(id))
+    const prod = listaProds.filter((p) => p.id === id)
 
     return (
         <>

@@ -9,11 +9,12 @@ const CartProvider = ({ children }) => {
         let productoAgregado;
         let product = cart.find((p) => p.id === prod.id)
         if (product) {
-            if(product.cantidad >= product.stock) {
+            product.cantidad += cantidad;
+            if(product.cantidad > product.stock) {
                 alert("No hay mas unidades disponibles")
+                product.cantidad -= cantidad;
                 return
             }
-                product.cantidad += cantidad;
                 productoAgregado = [...cart]
         } else {
             product = {
@@ -22,7 +23,8 @@ const CartProvider = ({ children }) => {
                 precio: prod.precio,
                 cantidad: cantidad,
                 imagen: prod.imagen,
-                stock: prod.stock
+                stock: prod.stock,
+                descripcion: prod.descripcion
             };
             productoAgregado = [...cart, product]
         }
@@ -53,7 +55,6 @@ const CartProvider = ({ children }) => {
 
     const vaciarCarrito = () => {
         setCart([])
-        console.log(cart)
     }
 
     const elimnarProd = (id) => {
