@@ -1,5 +1,6 @@
 import { cartContext } from "./cartContext";
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 
 const CartProvider = ({ children }) => {
 
@@ -11,7 +12,13 @@ const CartProvider = ({ children }) => {
         if (product) {
             product.cantidad += cantidad;
             if(product.cantidad > product.stock) {
-                alert("No hay mas unidades disponibles")
+                Swal.fire({
+                    title: "Lo sentimos!",
+                    icon: "error",
+                    text: "No hay mas unidades disponibles",
+                    confirmButtonColor: " rgb(212, 167, 212)",
+                    toast: true
+                })
                 product.cantidad -= cantidad;
                 return
             }

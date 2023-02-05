@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { cartContext } from "../../context/cartContext";
 import { collection, addDoc, getFirestore, updateDoc, doc } from "firebase/firestore"
+import Swal from "sweetalert2";
 
 function OrderForm() {
     const [show, setShow] = useState(false);
@@ -52,7 +53,14 @@ function OrderForm() {
         addDoc(querySnapshot, order)
             .then((response) => {
                 updateStock()
-                alert(`Su compra se ha realizado con exito! Codigo de seguimiento: ${response.id}`)
+                // Swal.fire(`Su compra se ha realizado con exito! Codigo de seguimiento: ${response.id}`)
+                Swal.fire({
+                    title: "Felicitaciones!",
+                    icon: "success",
+                    text: `Su compra se ha realizado con exito! Codigo de seguimiento: ${response.id}`,
+                    confirmButtonColor: " rgb(212, 167, 212)",
+                    toast: true
+                })
                 handleClose()
                 vaciarCarrito()
             }).catch(error => console.log(error))
