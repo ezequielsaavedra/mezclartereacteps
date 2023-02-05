@@ -17,7 +17,7 @@ const ItemList = ({ listaProductos }) => {
                         />
                         <Card.Body>
                             <Card.Title>{p.name}</Card.Title>
-                            <Link to={`item/${p.id}`}><button className="details-button">Ver detalles</button></Link>
+                            <Link to={`/item/${p.id}`}><button className="details-button">Ver detalles</button></Link>
                         </Card.Body>
                         <ListGroup className="list-group-flush">
                             <ListGroup.Item>Precio: ${p.precio}</ListGroup.Item>
