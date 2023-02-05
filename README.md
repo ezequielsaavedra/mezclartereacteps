@@ -10,4 +10,4 @@ Mezclarte es un microemprendimiento de macetas, velas, decoraciones, etc. artesa
 - Font Awesome (https://fontawesome.com)
 - SweetAlert2 (https://sweetalert2.github.io)
 
-![Alt Text](./2023-02-05%2011-31-17_Trim.mp4)
+![Alt Text](./2023-02-05%2011-31-17_Trim_Trim.mp4)
