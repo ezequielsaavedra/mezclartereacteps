@@ -53,7 +53,6 @@ function OrderForm() {
         addDoc(querySnapshot, order)
             .then((response) => {
                 updateStock()
-                // Swal.fire(`Su compra se ha realizado con exito! Codigo de seguimiento: ${response.id}`)
                 Swal.fire({
                     title: "Felicitaciones!",
                     icon: "success",
